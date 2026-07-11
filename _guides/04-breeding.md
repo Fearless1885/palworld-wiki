@@ -11,3 +11,5 @@ title: Breeding Crash Course
 - **1.0 warning:** breeding combinations were comprehensively reviewed and the strongest Pals pushed later into progression — Early Access combo lists are unreliable now, so verify pairs in an updated calculator.
 
 *Rule of thumb: breed the passives first, then condense and fix IVs — a perfect-passive child is the hard part.*
+
+*This is the short version — the full 1.0 deep dive (Mutation, cakes, IVs, the Legend chain) lives on the **Breeding** page in the nav.*

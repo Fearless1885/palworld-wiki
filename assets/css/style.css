@@ -305,3 +305,10 @@ details.build[open] summary::before{transform:rotate(90deg)}
 .page-title{font-family:'Lilita One',sans-serif;font-size:clamp(28px,4.5vw,42px);margin:34px 0 8px;text-shadow:0 3px 0 rgba(0,0,0,.35)}
 .page-title .tint{color:var(--gold)}
 .page-sub{color:var(--ink-dim);max-width:680px;font-size:15px;line-height:1.55;margin-bottom:10px}
+
+/* ---------- Tables inside guide cards ---------- */
+.g-card table{border-collapse:collapse;margin:12px 0 0;font-size:12.5px;width:100%}
+.g-card th,.g-card td{border:1px solid var(--line);padding:6px 9px;text-align:left;vertical-align:top}
+.g-card th{background:var(--panel-2);color:var(--ink);font-weight:700}
+.g-card td{color:#c3d1dd}
+.g-card td strong{color:var(--ink)}
