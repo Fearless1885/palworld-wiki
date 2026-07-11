@@ -1,0 +1,18 @@
+---
+layout: default
+title: Breeding Guide
+description: The complete Palworld 1.0 breeding guide — Mutation, the four new cakes, passive inheritance, the Legend chain, IV breeding and the right order to build a perfect Pal.
+---
+<h1 class="page-title">Breeding <span class="tint">Guide</span></h1>
+<p class="page-sub">Catching gets you a species; breeding gets you the <b>exact Pal you want</b> — right species, right passives, high IVs, and since 1.0 a shot at a Mutation that hatches stronger than any normal result. 1.0 rebuilt this system (Mutation, four new cakes, rebalanced combos), so read even if you bred in Early Access. Passive names below are all searchable on the <a href="{{ '/' | relative_url }}" style="color:var(--sky)">Wiki tab</a>.</p>
+
+<div class="guide-grid">
+{% assign steps = site.breeding | sort: "num" %}
+{% for s in steps %}
+  <div class="g-card{% if s.wide %} wide{% endif %}">
+    <div class="g-num">{{ s.num }} · {{ s.eyebrow }}</div>
+    <h3>{{ s.title }}</h3>
+    {{ s.content }}
+  </div>
+{% endfor %}
+</div>

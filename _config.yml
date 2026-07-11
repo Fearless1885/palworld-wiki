@@ -12,6 +12,8 @@ collections:
     output: false
   starter:
     output: false
+  breeding:
+    output: false
 
 # Keep Jekyll's hands off the JS data/logic (they contain ${...} template literals;
 # harmless to Liquid, but exclusion makes intent explicit and builds faster).
