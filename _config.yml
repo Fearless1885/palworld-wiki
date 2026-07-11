@@ -1,0 +1,20 @@
+title: Palworld Wiki
+description: Unofficial fan wiki — passive skills, Pal builds, guides and patch notes.
+# IMPORTANT: set baseurl to "/<repo-name>" for a project site, e.g. "/palworld-wiki".
+# Leave as "" only if this is a user site (username.github.io repo).
+baseurl: "/palworld-wiki"
+url: ""
+
+markdown: kramdown
+
+collections:
+  guides:
+    output: false
+
+# Keep Jekyll's hands off the JS data/logic (they contain ${...} template literals;
+# harmless to Liquid, but exclusion makes intent explicit and builds faster).
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor

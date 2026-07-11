@@ -1,0 +1,101 @@
+---
+layout: default
+title: Wiki
+---
+<header class="hero">
+  <div class="eyebrow">Unofficial fan reference</div>
+  <h1>Palworld <span class="tint">Wiki</span></h1>
+  <p class="sub">Every passive skill and what it does, plus the Pals worth building around with <b>recommended 4-slot passive builds</b>. The Tips &amp; Guide and Patch Notes pages are in the nav above.</p>
+
+  <nav class="tabs" role="tablist" aria-label="Wiki sections">
+    <button class="tab-btn active" id="tabBtnSkills" role="tab" aria-selected="true" aria-controls="panelSkills">Passive Skills <span class="tab-count" id="tabCountSkills"></span></button>
+    <button class="tab-btn" id="tabBtnPals" role="tab" aria-selected="false" aria-controls="panelPals">Pals &amp; Recommended Passives <span class="tab-count" id="tabCountPals"></span></button>
+  </nav>
+</header>
+
+<!-- ================= TAB 1: PASSIVE SKILLS ================= -->
+<section class="tab-panel active" id="panelSkills" role="tabpanel" aria-labelledby="tabBtnSkills">
+<div class="controls">
+  <div class="search-row">
+    <label class="search">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#e9f0f6" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+      <input id="skillQ" type="search" placeholder="Search skills or effects… (e.g. attack, work speed, legend)" aria-label="Search passive skills">
+    </label>
+    <div class="count"><b id="skillShown">0</b> / <span id="skillTotal">0</span> skills</div>
+  </div>
+
+  <div class="chip-row" id="tierChips">
+    <span class="chip-label">Tier</span>
+    <button class="chip wt" data-tier="W">❋ World Tree</button>
+    <button class="chip rainbow" data-tier="R">✦ Rainbow</button>
+    <button class="chip" data-tier="3">+3</button>
+    <button class="chip" data-tier="2">+2</button>
+    <button class="chip" data-tier="1">+1</button>
+    <button class="chip neg" data-tier="-1">−1</button>
+    <button class="chip neg" data-tier="-2">−2</button>
+    <button class="chip neg" data-tier="-3">−3</button>
+  </div>
+
+  <div class="chip-row" id="catChips">
+    <span class="chip-label">Category</span>
+    <button class="chip" data-cat="combat">Combat</button>
+    <button class="chip" data-cat="work">Work &amp; Base</button>
+    <button class="chip" data-cat="movement">Movement</button>
+    <button class="chip" data-cat="upkeep">Hunger &amp; Sanity</button>
+    <button class="chip" data-cat="mount">Mount Stamina</button>
+    <button class="chip" data-cat="player">Player Buffs</button>
+    <button class="chip" data-cat="elem-atk">Element ATK</button>
+    <button class="chip" data-cat="elem-def">Element Resist</button>
+    <button class="chip" data-cat="trade">Trade &amp; Breeding</button>
+    <button class="chip" data-cat="exclusive">Boss / Raid Exclusive</button>
+    <button class="clear-btn" id="skillClearAll">Clear filters</button>
+  </div>
+</div>
+
+
+<div class="grid" id="skillGrid" aria-live="polite"></div>
+
+<section class="howto">
+  <h2>How passives work</h2>
+  <p><b>Tiers</b> (added in the Feybreak update) show how strong a passive is: +3 is the best standard tier, −3 the worst, and <b>Rainbow</b> is a special top tier for the rarest passives, and the 1.0 launch added an even rarer <b>World Tree</b> tier — high-power passives with built-in trade-offs, found only on Pals caught in the World Tree region. A Pal's passives are hidden until you capture it, and you can't change them afterwards — but children inherit passives from their parents, so <b>chain-breeding</b> is how you build a "perfect" Pal (e.g. Legend + Ferocious + Musclehead + Demon God for raw damage, or Artisan + Remarkable Craftsmanship + Serious + Work Slave for a base worker). Boss-exclusive passives like <b>Legend</b> or <b>Invader</b> must first be caught on their source Pal before they can be bred onto anything else.</p>
+</section>
+</section>
+
+<!-- ================= TAB 2: PALS & ROLES ================= -->
+<section class="tab-panel" id="panelPals" role="tabpanel" aria-labelledby="tabBtnPals">
+<div class="controls">
+  <div class="search-row">
+    <label class="search">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#e9f0f6" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+      <input id="palQ" type="search" placeholder="Search Pals, roles, jobs or passives… (e.g. anubis, mining, legend)" aria-label="Search Pals">
+    </label>
+    <div class="count"><b id="palShown">0</b> / <span id="palTotal">0</span> pals</div>
+  </div>
+  <div class="chip-row" id="roleChips">
+    <span class="chip-label">Role</span>
+    <button class="chip" data-role="combat">Combat</button>
+    <button class="chip" data-role="worker">Base Worker</button>
+    <button class="chip" data-role="fly">Flying Mount</button>
+    <button class="chip" data-role="ground">Ground Mount</button>
+    <button class="chip" data-role="water">Water Mount</button>
+    <button class="chip" data-role="ranch">Ranch</button>
+    <button class="chip" data-role="transport">Transport</button>
+    <button class="chip" data-role="dual">Dual-Use</button>
+    <button class="chip" data-role="early">Early Game</button>
+    <button class="chip" data-role="endgame">Raid / Endgame</button>
+    <button class="clear-btn" id="palClearAll">Clear filters</button>
+  </div>
+</div>
+
+
+<div class="grid" id="palGrid" aria-live="polite"></div>
+
+<section class="legend-box">
+  <h2>How the passive builds work</h2>
+  <p>Recommended builds follow four archetypes. <b>Attackers</b> stack Legend + Demon God + Ferocious + their matching element passive (e.g. Divine Dragon on a Dragon type) — swap in Musclehead if the Pal never works at base. <b>Workers</b> want Remarkable Craftsmanship + Artisan + Serious + a fourth slot (Work Slave for max speed if it never fights, or Nocturnal/Vampiric so it works through the night). <b>Mounts</b> stack Swift + Runner + Nimble + a stamina passive (Eternal Engine &gt; Infinite Stamina). <b>Ranch Pals</b> don't benefit from work speed — keep them fed and sane with Diet Lover, Mastery of Fasting, Workaholic and Positive Thinker instead. Hover any passive chip to see what it does.</p>
+</section>
+</section>
+
+<script src="{{ '/data/skills.js' | relative_url }}"></script>
+<script src="{{ '/data/pals.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/wiki.js' | relative_url }}"></script>

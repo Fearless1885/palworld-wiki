@@ -1,0 +1,18 @@
+---
+layout: default
+title: Tips & Guide
+description: A quick field manual for the Palpagos Islands — early game, bases, combat, breeding and passive hunting.
+---
+<h1 class="page-title">Tips &amp; <span class="tint">Guide</span></h1>
+<p class="page-sub">A quick field manual for the Palpagos Islands — the tricks that save the most hours, from your first base to breeding a <b>4-passive Rainbow monster</b>. Each section below is a Markdown file in <code>_guides/</code>, so adding or editing a section never touches the site code.</p>
+
+<div class="guide-grid">
+{% assign guides = site.guides | sort: "num" %}
+{% for g in guides %}
+  <div class="g-card{% if g.wide %} wide{% endif %}">
+    <div class="g-num">{{ g.num }} · {{ g.eyebrow }}</div>
+    <h3>{{ g.title }}</h3>
+    {{ g.content }}
+  </div>
+{% endfor %}
+</div>

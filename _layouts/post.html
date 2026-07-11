@@ -1,0 +1,8 @@
+---
+layout: default
+---
+<h1 class="page-title">{{ page.title }}</h1>
+<p class="page-sub"><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%-d %B %Y" }}</time>{% if page.patch %} · Patch {{ page.patch }}{% endif %}</p>
+<div class="post-body">
+{{ content }}
+</div>

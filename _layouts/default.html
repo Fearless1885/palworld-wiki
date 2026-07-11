@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
+<meta name="description" content="{{ page.description | default: site.description }}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Asap:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+</head>
+<body>
+<div class="wrap">
+
+<nav class="site-nav" aria-label="Site">
+  <a class="brand" href="{{ '/' | relative_url }}">Palworld <span>Wiki</span></a>
+  <a class="nav-link {% if page.url == '/' %}active{% endif %}" href="{{ '/' | relative_url }}">Wiki</a>
+  <a class="nav-link {% if page.url contains '/guide/' %}active{% endif %}" href="{{ '/guide/' | relative_url }}">Tips &amp; Guide</a>
+  <a class="nav-link {% if page.url contains '/patch-notes/' or page.layout == 'post' %}active{% endif %}" href="{{ '/patch-notes/' | relative_url }}">Patch Notes</a>
+</nav>
+
+{{ content }}
+
+<footer>
+  Fan-made reference — not affiliated with or endorsed by Pocketpair, Inc. Values reflect the game as of the latest data update; balance patches shift numbers, so double-check in-game tooltips if something looks off.
+</footer>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,17 @@
+---
+layout: default
+title: Patch Notes
+description: Wiki changelog — what changed in the data with each Palworld patch.
+---
+<h1 class="page-title">Patch <span class="tint">Notes</span></h1>
+<p class="page-sub">The wiki's changelog. Each entry is a Markdown post in <code>_posts/</code> documenting what a game patch changed and how the data files were updated to match.</p>
+
+<div class="post-list">
+{% for post in site.posts %}
+  <a class="post-item" href="{{ post.url | relative_url }}">
+    <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%-d %B %Y" }}</time>
+    <h3>{{ post.title }}</h3>
+    <p>{{ post.excerpt | strip_html | truncate: 180 }}</p>
+  </a>
+{% endfor %}
+</div>
