@@ -1,0 +1,18 @@
+---
+layout: default
+title: Starter Guide
+description: A new-player walkthrough for Palworld 1.0 — first hours, first Pals, stat points, base setup and the mistakes to avoid.
+---
+<h1 class="page-title">Starter <span class="tint">Guide</span></h1>
+<p class="page-sub">The 1.0 launch rebuilt the early game — new tutorial flow, reworked missions, a level 80 cap — so even Early Access veterans benefit from a fresh read. Work through these in order for a clean first ten hours. (For general tricks beyond the opening, see <a href="{{ '/guide/' | relative_url }}" style="color:var(--sky)">Tips &amp; Guide</a>.)</p>
+
+<div class="guide-grid">
+{% assign steps = site.starter | sort: "num" %}
+{% for s in steps %}
+  <div class="g-card{% if s.wide %} wide{% endif %}">
+    <div class="g-num">{{ s.num }} · {{ s.eyebrow }}</div>
+    <h3>{{ s.title }}</h3>
+    {{ s.content }}
+  </div>
+{% endfor %}
+</div>

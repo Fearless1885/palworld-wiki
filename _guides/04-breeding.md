@@ -8,5 +8,6 @@ title: Breeding Crash Course
 - **Chain-breed:** get each target passive onto one parent line first, then combine pairs (2-passive × 2-passive → 4-passive) rather than praying for a jackpot.
 - A **Philanthropist** parent doubles breeding speed; a **Babysitter** Pal at base (new in 1.0) speeds up egg production and incubation on top.
 - Exclusive passives (Legend, Invader, Savior…) must be **caught on their source Pal first** — then they breed onto anything.
+- **1.0 warning:** breeding combinations were comprehensively reviewed and the strongest Pals pushed later into progression — Early Access combo lists are unreliable now, so verify pairs in an updated calculator.
 
 *Rule of thumb: breed the passives first, then condense and fix IVs — a perfect-passive child is the hard part.*
