@@ -1,0 +1,48 @@
+---
+layout: default
+title: Categories
+description: Browse the wiki by category — Pals by role and element, work jobs, bosses, and the planned item, dungeon and NPC databases.
+---
+<h1 class="page-title">Browse by <span class="tint">Category</span></h1>
+<p class="page-sub">Every category below is a hub. The live ones deep-link straight into filtered wiki views; the dashed ones are planned databases with their linking rules already defined (see the architecture notes at the bottom).</p>
+
+<h2 class="np-h" style="font-size:12px;margin-top:24px">Pals</h2>
+<div class="cat-grid">
+  <a class="cat-card" href="{{ '/?tab=pals' | relative_url }}"><span class="ci">🐾</span><h3>All Pals</h3><p>Every profiled Pal with roles, work jobs and recommended passive builds.</p></a>
+  <a class="cat-card" href="{{ '/?tab=pals&role=fly' | relative_url }}"><span class="ci">🪽</span><h3>Flying Pals</h3><p>Flying mounts from Nitewing to Jetragon and Panthalus.</p></a>
+  <a class="cat-card" href="{{ '/?tab=pals&role=ground' | relative_url }}"><span class="ci">🐎</span><h3>Ground Mounts</h3><p>Land speedsters and pack mules.</p></a>
+  <a class="cat-card" href="{{ '/?tab=pals&role=water' | relative_url }}"><span class="ci">🌊</span><h3>Water Mounts</h3><p>Ocean crossers and the new sky-whale.</p></a>
+  <a class="cat-card" href="{{ '/?tab=pals&q=fire' | relative_url }}"><span class="ci">🔥</span><h3>Fire Pals</h3><p>Fire types — fighters and furnace crews alike.</p></a>
+  <a class="cat-card" href="{{ '/?tab=pals&q=water' | relative_url }}"><span class="ci">💧</span><h3>Water Pals</h3><p>Water types across combat, watering and mounts.</p></a>
+  <a class="cat-card" href="{{ '/?tab=pals&q=dark' | relative_url }}"><span class="ci">🌑</span><h3>Dark Pals</h3><p>Night-shift workers and Dark-element carries.</p></a>
+  <a class="cat-card" href="{{ '/?tab=pals&q=dragon' | relative_url }}"><span class="ci">🐉</span><h3>Dragon Pals</h3><p>From Jetragon to Astralym.</p></a>
+  <a class="cat-card" href="{{ '/?tab=pals&role=worker' | relative_url }}"><span class="ci">🛠️</span><h3>Base Workers</h3><p>The production backbone, including 1.0's Level 8 specialists.</p></a>
+  <a class="cat-card" href="{{ '/?tab=pals&role=ranch' | relative_url }}"><span class="ci">🐑</span><h3>Ranch Pals</h3><p>Eggs, milk, honey, wool and gold on autopilot.</p></a>
+  <a class="cat-card" href="{{ '/?tab=pals&role=endgame' | relative_url }}"><span class="ci">👑</span><h3>Bosses &amp; Raid Pals</h3><p>Tower, raid and legendary Pals with exclusive passives.</p></a>
+  <a class="cat-card" href="{{ '/?tab=pals&q=alpha' | relative_url }}"><span class="ci">⭐</span><h3>Alpha Pals</h3><p>Field bosses with guaranteed exclusive passives and high IVs.</p></a>
+</div>
+
+<h2 class="np-h" style="font-size:12px;margin-top:24px">Systems &amp; Reference</h2>
+<div class="cat-grid">
+  <a class="cat-card" href="{{ '/?tab=skills' | relative_url }}"><span class="ci">✨</span><h3>Passive Skills</h3><p>All 115 passives with tiers, categories and sources.</p></a>
+  <a class="cat-card" href="{{ '/?tab=work' | relative_url }}"><span class="ci">⚒️</span><h3>Work Suitability</h3><p>All 12 jobs, their icons, levels and top workers.</p></a>
+  <a class="cat-card" href="{{ '/breeding/' | relative_url }}"><span class="ci">🥚</span><h3>Breeding</h3><p>The 1.0 system: Mutation, cakes, inheritance, IVs.</p></a>
+  <a class="cat-card" href="{{ '/starter/' | relative_url }}"><span class="ci">🧭</span><h3>Starter Guide</h3><p>The first ten hours, done right.</p></a>
+  <a class="cat-card" href="{{ '/guide/' | relative_url }}"><span class="ci">💡</span><h3>Tips &amp; Tricks</h3><p>Bases, combat, capture and endgame build templates.</p></a>
+  <a class="cat-card" href="{{ '/patch-notes/' | relative_url }}"><span class="ci">📜</span><h3>Patch Notes</h3><p>The wiki changelog, patch by patch.</p></a>
+</div>
+
+<h2 class="np-h" style="font-size:12px;margin-top:24px">Planned Databases</h2>
+<div class="cat-grid">
+  <a class="cat-card stub" href="#architecture"><span class="ci">🪨</span><h3>Materials</h3><p>Ores, drops and World Tree resources — each linking to gathering locations and every recipe that consumes it.</p><span class="badge">Planned</span></a>
+  <a class="cat-card stub" href="#architecture"><span class="ci">🍰</span><h3>Consumables</h3><p>Food, medicine, cakes and spheres — each linking to its recipe and effects.</p><span class="badge">Planned</span></a>
+  <a class="cat-card stub" href="#architecture"><span class="ci">🗡️</span><h3>Weapons</h3><p>1.0's 13 new weapons and the Soralite/Paloxite gear chain.</p><span class="badge">Planned</span></a>
+  <a class="cat-card stub" href="#architecture"><span class="ci">🏆</span><h3>Legendary Equipment</h3><p>Blueprint drop sources and Drafting Table upgrade paths.</p><span class="badge">Planned</span></a>
+  <a class="cat-card stub" href="#architecture"><span class="ci">🏰</span><h3>Dungeons</h3><p>Locations, respawn cycles, Alpha bosses and loot tables.</p><span class="badge">Planned</span></a>
+  <a class="cat-card stub" href="#architecture"><span class="ci">🧑‍🤝‍🧑</span><h3>NPCs</h3><p>Merchants, the Arena vendor, Dr. Brawn and quest givers.</p><span class="badge">Planned</span></a>
+</div>
+
+<section class="legend-box" id="architecture" style="margin-top:30px">
+  <h2>How pages link together (the architecture)</h2>
+  <p>The wiki follows a <b>hub-and-spoke</b> rule set so nothing is ever a dead end. <b>Hubs</b> are category pages like this one — they only contain links down to entries. <b>Entries</b> (a Pal, an item, a boss) always link <em>sideways</em> to related entries and <em>up</em> to their hubs. The standing rules: <b>every Pal links to breeding</b> (its card links to the Breeding guide today; when per-Pal pages exist, that becomes its exact parent combinations and what it breeds into); <b>every item links to its crafting recipe</b> and every recipe links back to each ingredient; <b>every resource links to gathering locations</b> and the tools/Pals that harvest it; <b>every boss links to its drops and a strategy section</b>, and each drop links onward to what it crafts. Passives are already the model: a Pal card names its passives → hover shows the effect and source → the source names a boss or system → which is searchable one tab away. Deep links (e.g. <code>/?tab=pals&amp;role=fly</code>) make every filtered view shareable, so guide pages can cite "all Flying Pals" as a real link rather than a phrase. The test for good discoverability: from any page, any related fact should be at most two clicks away.</p>
+</section>

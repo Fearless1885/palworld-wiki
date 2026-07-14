@@ -10,8 +10,26 @@ title: Wiki
   <nav class="tabs" role="tablist" aria-label="Wiki sections">
     <button class="tab-btn active" id="tabBtnSkills" role="tab" aria-selected="true" aria-controls="panelSkills">Passive Skills <span class="tab-count" id="tabCountSkills"></span></button>
     <button class="tab-btn" id="tabBtnPals" role="tab" aria-selected="false" aria-controls="panelPals">Pals &amp; Recommended Passives <span class="tab-count" id="tabCountPals"></span></button>
+    <button class="tab-btn" id="tabBtnWork" role="tab" aria-selected="false" aria-controls="panelWork">Work Suitability</button>
   </nav>
 </header>
+
+<!-- ================= GUESS THAT PAL! ================= -->
+<section class="guess-wrap" id="guessGame">
+  <div class="guess-head">
+    <h2>Guess that Pal!</h2>
+    <div class="guess-score">Streak: <b id="gStreak">0</b> · Best: <b id="gBest">0</b></div>
+  </div>
+  <div class="guess-body">
+    <div class="sil-box" id="gSil" aria-label="Mystery Pal silhouette"></div>
+    <div class="guess-opts" id="gOpts"></div>
+  </div>
+  <div class="guess-foot">
+    <div class="guess-msg" id="gMsg">Who's that Pal? Pick a name.</div>
+    <button class="guess-next" id="gNext">Next Pal ➔</button>
+  </div>
+  <div class="guess-note">Out of the box the game shows generated mystery shapes (each Pal always gets the same shape). To use real silhouettes, drop PNGs into <code>assets/img/silhouettes/</code> named after the Pal in lowercase with hyphens (e.g. <code>frostallion-noct.png</code>) — the game picks them up automatically. Export them from your own screenshots to stay on the right side of copyright.</div>
+</section>
 
 <!-- ================= TAB 1: PASSIVE SKILLS ================= -->
 <section class="tab-panel active" id="panelSkills" role="tabpanel" aria-labelledby="tabBtnSkills">
@@ -94,6 +112,85 @@ title: Wiki
   <h2>How the passive builds work</h2>
   <p>Recommended builds follow four archetypes. <b>Attackers</b> stack Legend + Demon God + Ferocious + their matching element passive (e.g. Divine Dragon on a Dragon type) — swap in Musclehead if the Pal never works at base. <b>Workers</b> want Remarkable Craftsmanship + Artisan + Serious + a fourth slot (Work Slave for max speed if it never fights, or Nocturnal/Vampiric so it works through the night). <b>Mounts</b> stack Swift + Runner + Nimble + a stamina passive (Eternal Engine &gt; Infinite Stamina). <b>Ranch Pals</b> don't benefit from work speed — keep them fed and sane with Diet Lover, Mastery of Fasting, Workaholic and Positive Thinker instead. Hover any passive chip to see what it does.</p>
 </section>
+
+<section class="newpals" id="newPalsSection">
+  <h2>All 72 New Pals in 1.0</h2>
+  <p class="np-sub">The complete Paldeck additions — 47 new species and 25 elemental variants (Paldeck now 287). Click any name to search it above; the standouts already have full build cards. Astralym and Panthalus sit on top of these as boss/quest catches. Species elements are filled in as the community confirms them.</p>
+  <div class="np-h">New species (47)</div>
+  <div class="np-chips" id="npSpecies"></div>
+  <div class="np-h">Elemental variants (25) — Ignis=Fire · Cryst=Ice · Noct=Dark · Lux=Electric · Terra=Ground · Botan=Grass · Primo=new 1.0 line</div>
+  <div class="np-chips" id="npVariants"></div>
+</section>
+</section>
+
+<!-- ================= TAB 3: WORK SUITABILITY ================= -->
+<section class="tab-panel" id="panelWork" role="tabpanel" aria-labelledby="tabBtnWork">
+<div class="work-grid">
+  <div class="work-explain">
+    <h3>How work suitability levels work</h3>
+    <p>Every Pal has one or more work suitabilities, each with a level. <b>Higher level = faster work</b>, and some structures demand a minimum level just to be operated. Early Access topped out around Level 4 for most jobs — <b>1.0 raised the ceiling</b>, with specialists like Solenne (Handiwork 8) and Renjishi (Kindling 8) redefining top-end bases; the suitability scale itself now runs toward Level 10. Levels can be raised further: <b>Pal Condensation</b> (48 copies for max rank since 1.0) upgrades a Pal's stars, some partner skills boost the whole base (Puffolt grants +1 Generating to every base Pal), and 1.0's mutation passives like <b>Farmhand</b> and <b>Ranch Master</b> add +1/+2 to specific jobs. One management tip above all: a multi-skill Pal wanders between tasks — use the <b>Monitoring Stand</b> to lock specialists to their specialty.</p>
+  </div>
+  <div class="work-card">
+    <div class="work-top"><div class="work-icon">🔥</div><h3>Kindling</h3></div>
+    <p>Lights furnaces and cooking stations — smelting ingots, cooking food, firing kilns. Higher-tier furnaces need higher Kindling levels to operate at all.</p>
+    <div class="work-tops"><b>Top workers:</b> Renjishi (Lv8), Blazamut Ryu (Lv4), Jormuntide Ignis (Lv4)</div>
+  </div>
+  <div class="work-card">
+    <div class="work-top"><div class="work-icon">💧</div><h3>Watering</h3></div>
+    <p>Waters crop plots, powers the crusher and mill, and keeps hydration-based stations running.</p>
+    <div class="work-tops"><b>Top workers:</b> Jormuntide (Lv4), Whalaska (Lv3), Shaolong (Lv3)</div>
+  </div>
+  <div class="work-card">
+    <div class="work-top"><div class="work-icon">🌱</div><h3>Planting</h3></div>
+    <p>Sows seeds at berry, wheat and vegetable plantations — the start of every food and Cake pipeline.</p>
+    <div class="work-tops"><b>Top workers:</b> Lyleen (Lv4), Leafan, Petallia (Lv3)</div>
+  </div>
+  <div class="work-card">
+    <div class="work-top"><div class="work-icon">⚡</div><h3>Generating Electricity</h3></div>
+    <p>Charges power generators that feed assembly lines, fridges and late-game machinery.</p>
+    <div class="work-tops"><b>Top workers:</b> Orserk (Lv4), Puffolt (+1 to every base Pal), Grizzbolt (Lv3)</div>
+  </div>
+  <div class="work-card">
+    <div class="work-top"><div class="work-icon">✋</div><h3>Handiwork</h3></div>
+    <p>Crafting at workbenches, assembly lines, and construction of buildings — the busiest job in any production base.</p>
+    <div class="work-tops"><b>Top workers:</b> Solenne (Lv8), Anubis (Lv4), Wumpo Botan (Lv2)</div>
+  </div>
+  <div class="work-card">
+    <div class="work-top"><div class="work-icon">🧺</div><h3>Gathering</h3></div>
+    <p>Harvests ripe crops and picks berries so your Planting Pals' work actually reaches the feed box.</p>
+    <div class="work-tops"><b>Top workers:</b> Frostallion Noct (Lv4), Verdash (Lv3), Nitewing (Lv2)</div>
+  </div>
+  <div class="work-card">
+    <div class="work-top"><div class="work-icon">🪓</div><h3>Lumbering</h3></div>
+    <p>Chops trees and works the logging site for a steady wood supply.</p>
+    <div class="work-tops"><b>Top workers:</b> Wumpo Botan (Lv3), Warsect (Lv3), Bushi (Lv3)</div>
+  </div>
+  <div class="work-card">
+    <div class="work-top"><div class="work-icon">⛏️</div><h3>Mining</h3></div>
+    <p>Breaks ore, stone and coal nodes and staffs the stone pit — plus 1.0's Soralite Quarry automation.</p>
+    <div class="work-tops"><b>Top workers:</b> Astegon (Lv4), Blazamut (Lv4), Digtoise (Lv3)</div>
+  </div>
+  <div class="work-card">
+    <div class="work-top"><div class="work-icon">💊</div><h3>Medicine Production</h3></div>
+    <p>Brews medicines and the Remedies/Elixirs that permanently boost your stats at the Medieval Medicine Workbench.</p>
+    <div class="work-tops"><b>Top workers:</b> Lyleen (Lv3), Lyleen Noct (Lv3), Petallia (Lv2)</div>
+  </div>
+  <div class="work-card">
+    <div class="work-top"><div class="work-icon">❄️</div><h3>Cooling</h3></div>
+    <p>Runs coolers and fridges to stop food spoiling, and powers ice-based production stations.</p>
+    <div class="work-tops"><b>Top workers:</b> Frostallion (Lv4), Bastigor (Lv3), Whalaska (Lv2)</div>
+  </div>
+  <div class="work-card">
+    <div class="work-top"><div class="work-icon">📦</div><h3>Transporting</h3></div>
+    <p>Hauls crafted goods and gathered materials into storage — the invisible job that stops a base silting up.</p>
+    <div class="work-tops"><b>Top workers:</b> Wumpo Botan (Lv4), Faleris (Lv3), Helzephyr (Lv3)</div>
+  </div>
+  <div class="work-card">
+    <div class="work-top"><div class="work-icon">🐑</div><h3>Farming</h3></div>
+    <p>Ranch production: assigned Pals generate goods over time — eggs, milk, wool, honey, even gold coins.</p>
+    <div class="work-tops"><b>Top workers:</b> Chikipi (eggs), Mozzarina (milk), Beegarde (honey), Mau (gold)</div>
+  </div>
+</div>
 </section>
 
 <script src="{{ '/data/skills.js' | relative_url }}"></script>

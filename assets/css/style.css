@@ -312,3 +312,63 @@ details.build[open] summary::before{transform:rotate(90deg)}
 .g-card th{background:var(--panel-2);color:var(--ink);font-weight:700}
 .g-card td{color:#c3d1dd}
 .g-card td strong{color:var(--ink)}
+
+/* ---------- Guess that Pal! ---------- */
+.guess-wrap{margin:6px 0 26px;background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:18px 20px}
+.guess-head{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+.guess-head h2{font-family:'Lilita One',sans-serif;font-size:22px;color:var(--gold)}
+.guess-score{font-size:13px;color:var(--ink-dim);font-variant-numeric:tabular-nums}
+.guess-score b{color:var(--sky)}
+.guess-body{display:flex;gap:20px;align-items:center;flex-wrap:wrap;margin-top:14px}
+.sil-box{flex:none;width:170px;height:170px;border-radius:14px;background:radial-gradient(circle at 50% 40%, #223142, #131b24);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;overflow:hidden}
+.sil-box img,.sil-box svg{max-width:86%;max-height:86%;filter:brightness(0) invert(0.08) drop-shadow(0 4px 8px rgba(0,0,0,.5))}
+.sil-box.revealed img,.sil-box.revealed svg{filter:none}
+.guess-opts{flex:1;min-width:220px;display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:8px}
+.guess-btn{border:1px solid var(--line);background:var(--panel-2);color:var(--ink);border-radius:10px;padding:11px 12px;font-family:inherit;font-size:14px;font-weight:600;cursor:pointer;transition:all .12s ease}
+.guess-btn:hover:not(:disabled){border-color:var(--sky)}
+.guess-btn:disabled{cursor:default;opacity:.75}
+.guess-btn.correct{background:rgba(111,208,138,.2);border-color:var(--leaf);color:#c9f0d5}
+.guess-btn.wrong{background:rgba(232,96,79,.18);border-color:var(--ember);color:#f0b0a7}
+.guess-foot{margin-top:12px;display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+.guess-msg{font-size:14px;font-weight:600;color:var(--ink-dim);min-height:20px}
+.guess-msg.win{color:var(--leaf)} .guess-msg.lose{color:var(--ember)}
+.guess-next{border:none;border-radius:10px;padding:9px 18px;font-family:'Lilita One',sans-serif;font-size:15px;background:var(--gold);color:#241a05;cursor:pointer}
+.guess-note{font-size:11.5px;color:var(--ink-dim);margin-top:10px;line-height:1.5}
+
+/* ---------- Work Suitability tab ---------- */
+.work-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px;margin-top:16px}
+.work-card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:16px}
+.work-top{display:flex;align-items:center;gap:12px;margin-bottom:9px}
+.work-icon{flex:none;width:44px;height:44px;border-radius:12px;background:var(--panel-2);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-size:22px}
+.work-card h3{font-family:'Lilita One',sans-serif;font-size:18px}
+.work-card p{font-size:13.5px;line-height:1.55;color:#c3d1dd}
+.work-tops{margin-top:9px;font-size:12.5px;color:var(--ink-dim)}
+.work-tops b{color:var(--gold)}
+.work-explain{grid-column:1/-1;background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px}
+.work-explain h3{font-family:'Lilita One',sans-serif;font-size:18px;color:var(--gold);margin-bottom:8px}
+.work-explain p{font-size:14px;line-height:1.6;color:var(--ink-dim)}
+.work-explain b{color:var(--ink)}
+
+/* ---------- New pals checklist ---------- */
+.newpals{margin-top:26px;background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:18px 20px}
+.newpals h2{font-family:'Lilita One',sans-serif;font-size:20px;color:var(--gold)}
+.newpals .np-sub{font-size:13px;color:var(--ink-dim);margin:6px 0 12px;line-height:1.5}
+.np-h{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--sky);margin:12px 0 8px}
+.np-chips{display:flex;flex-wrap:wrap;gap:6px}
+.np{display:inline-flex;align-items:center;gap:6px;background:var(--panel-2);border:1px solid var(--line);border-radius:8px;padding:5px 9px;font-size:12.5px;font-weight:600;color:var(--ink);cursor:pointer;transition:border-color .12s}
+.np:hover{border-color:var(--sky)}
+.np .num{color:var(--ink-dim);font-size:11px;font-variant-numeric:tabular-nums}
+.np .el{width:9px;height:9px}
+
+/* ---------- Card links & categories ---------- */
+.card-links{margin-top:10px;font-size:12.5px}
+.card-links a{color:var(--sky);text-decoration:none;font-weight:600}
+.card-links a:hover{text-decoration:underline}
+.cat-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px;margin-top:16px}
+a.cat-card{display:block;background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:15px 16px;text-decoration:none;transition:transform .12s,border-color .12s}
+a.cat-card:hover{transform:translateY(-2px);border-color:#3f5468}
+.cat-card .ci{font-size:22px}
+.cat-card h3{font-family:'Lilita One',sans-serif;font-size:17px;color:var(--ink);margin:6px 0 4px}
+.cat-card p{font-size:12.5px;color:var(--ink-dim);line-height:1.5}
+.cat-card.stub{opacity:.65;border-style:dashed}
+.cat-card .badge{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;background:var(--panel-2);color:var(--gold);border-radius:6px;padding:2px 7px;margin-top:8px}
