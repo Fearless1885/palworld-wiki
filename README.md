@@ -32,6 +32,12 @@ patch-notes/index.html      Lists all posts, newest first
 _config.yml                 Site settings (title, baseurl)
 ```
 
+## Site taxonomy & linking rules
+
+The **Categories** page (`categories/index.html`) is the site hub. Rules for growth: hubs link down to entries; entries link sideways (related entries) and up (their hubs). Standing links: every Pal → breeding; every item → its recipe; every resource → locations; every boss → drops + strategy. Filtered wiki views are shareable via URL params: `/?tab=pals&role=fly`, `/?tab=skills&tier=R`, `/?tab=pals&q=fire`, `/?tab=work`.
+
+The Guess that Pal! game looks for real silhouettes at `assets/img/silhouettes/<pal-name-slug>.png` and falls back to generated shapes — export silhouettes from your own screenshots (game artwork is copyrighted, so don't copy images from other sites).
+
 ## Everyday maintenance
 
 **Game patch changed a number?** Edit the value in `data/skills.js` or `data/pals.js`, then add a Markdown file to `_posts/` describing the change (copy the existing post as a template — filename must start with the date). Push; the site rebuilds itself.

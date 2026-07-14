@@ -397,3 +397,35 @@ const PALS = [
  why:"Early cooler/waterer — and famously usable as rocket-launcher ammunition.",
  b:{ideal:["Serious","Conceited","Diet Lover","Positive Thinker"],alt:["Artisan"]}}
 ];
+
+
+/* ---------- Complete 1.0 Paldeck additions (source: community Paldeck lists, July 2026) ----------
+   Species elements are only filled in where confirmed; variants take their element from the suffix
+   (Ignis=Fire, Cryst=Ice, Noct=Dark, Lux=Electric, Terra=Ground, Botan=Grass, Primo=new 1.0 line). */
+const NEWPALS = {
+species: [
+["13","Pupperai",""],["14","Clovee",""],["47","Amione",""],["50","Wispaw",""],
+["59","Muffly","ice"],["62","Puffolt","electric"],["72","Polapup",""],["81","Elgrove",""],
+["90","Leafan","grass"],["100","Needoll",""],["105","Moldron",""],["115","Majex",""],
+["120","Gildra",""],["128","Skutlass",""],["131","Pierdon",""],["133","Snugloo",""],
+["136","Carnibora",""],["138","Dualith",""],["140","Sekhmet",""],["142","Tetroise",""],
+["156","Bulldosu",""],["162","Valentail",""],["163","Snock",""],["164","Souffline",""],
+["165","Lapiron",""],["166","Hoodle",""],["167","Slowatt",""],["168","Bakemi",""],
+["169","Solmora",""],["170","Lapure",""],["171","Eidrolon",""],["172","Dynamoff",""],
+["173","Tropicaw",""],["174","Flaracle",""],["175","Ophydia",""],["176","Dupin","neutral"],
+["177","Roujay",""],["178","Venusa",""],["179","Mycora",""],["180","Loomen",""],
+["181","Wistella",""],["182","Solenne","dark"],["183","Renjishi","fire"],["184","Aegidron",""],
+["192","Shaolong","water"],["193","Silvance",""],["194","Dandilord",""]
+],
+variants: [
+["23B","Tanzee Ignis","fire"],["39B","Woolipop Terra","ground"],["48B","Gloopie Primo",""],
+["54B","Univolt Cryst","ice"],["72B","Polapup Terra","ground"],["81B","Elgrove Cryst","ice"],
+["89B","Petallia Ignis","fire"],["96B","Beakon Cryst","ice"],["98B","Rayhound Cryst","ice"],
+["100B","Needoll Noct","dark"],["105B","Moldron Cryst","ice"],["116B","Sibelyx Primo",""],
+["128B","Skutlass Ignis","fire"],["130B","Starryon Primo",""],["131B","Pierdon Cryst","ice"],
+["138B","Dualith Noct","dark"],["141B","Prixter Lux","electric"],["142B","Tetroise Primo",""],
+["148B","Nitemary Botan","grass"],["149B","Smokie Cryst","ice"],["157B","Celesdir Noct","dark"],
+["159B","Knocklem Ignis","fire"],["163B","Snock Lux","electric"],["169B","Solmora Lux","electric"],
+["171B","Eidrolon Ignis","fire"]
+]
+};
